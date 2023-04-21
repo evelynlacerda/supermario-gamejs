@@ -1,0 +1,86 @@
+body {
+    background: url('../assets/img/superMario.png') no-repeat fixed;
+    background-size: cover;
+    background-position-y: 100%;
+}
+
+.supermario {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 600px;
+    background-color: var(--light-blue);
+    border: 10px solid var(--border);
+    overflow: hidden;
+}
+
+.supermario__clouds {
+    position: absolute;
+    width: 400px;
+    top: 25px;
+    animation: supermario__clouds 8s infinite linear;
+}
+
+@keyframes supermario__clouds {
+    from {
+        right: -400px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.supermario__mario {
+    position: absolute;
+    width: 180px;
+    bottom: 36px;
+}
+
+.jump {
+    animation: supermario__mario 500ms ease-out;
+}
+
+@keyframes supermario__mario {
+    0% {
+        bottom: 36px;
+    }
+
+    25% {
+        bottom: 180px;
+    }
+
+    65% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 36px;
+    }
+}
+
+.supermario__pipe {
+    position: absolute;
+    width: 90px;
+    bottom: 40px;
+    animation: supermario__pipe 2s infinite linear;
+}
+
+@keyframes supermario__pipe {
+    from {
+        right: -90px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.supermario__floor {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    background: var(--floor) url('../assets/img/blocomario.svg') top;
+    background-size: 42.6px;
+}
