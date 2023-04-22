@@ -7,7 +7,7 @@ const jumpMario = () => {
 
     setTimeout(() => {
         mario.classList.remove('jump');
-    }, 650);
+    }, 550);
 }
 
 let fallMario = null;
@@ -35,7 +35,7 @@ const gameOver = setInterval(() => {
 
         let position = marioPosition;
         fallMario = setInterval(() => {
-            position -= 1;
+            position -= 1.5;
             mario.style.bottom = `${position}px`;
 
             if (postion <= -mario.offsetHeight) {

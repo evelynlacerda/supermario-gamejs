@@ -43,7 +43,7 @@ body {
 }
 
 .jump {
-    animation: supermario__mario 650ms ease-out;
+    animation: supermario__mario 550ms ease-out;
 }
 
 @keyframes supermario__mario {
