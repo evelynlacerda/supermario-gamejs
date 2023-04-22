@@ -22,7 +22,7 @@ body {
     position: absolute;
     width: 400px;
     top: 25px;
-    animation: supermario__clouds 8s infinite linear;
+    animation: supermario__clouds 20s infinite linear;
 }
 
 @keyframes supermario__clouds {
@@ -39,6 +39,7 @@ body {
     position: absolute;
     width: 180px;
     bottom: 36px;
+    z-index: +99;
 }
 
 .jump {
