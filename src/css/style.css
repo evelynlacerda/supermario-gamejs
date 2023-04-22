@@ -1,15 +1,19 @@
 body {
-    background: url('../assets/img/superMario.png') no-repeat fixed;
+    background: url('../img/superMario.png') no-repeat fixed;
     background-size: cover;
-    background-position-y: 100%;
+    background-position-y: 90%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .supermario {
     position: relative;
-    margin: 0 auto;
     width: 1000px;
     height: 600px;
-    background-color: var(--light-blue);
+    background-image: linear-gradient(var(--light-blue800), var(--light-blue900));
     border: 10px solid var(--border);
     overflow: hidden;
 }
@@ -38,7 +42,7 @@ body {
 }
 
 .jump {
-    animation: supermario__mario 500ms ease-out;
+    animation: supermario__mario 650ms ease-out;
 }
 
 @keyframes supermario__mario {
@@ -46,12 +50,12 @@ body {
         bottom: 36px;
     }
 
-    25% {
-        bottom: 180px;
+    30% {
+        bottom: 200px;
     }
 
     65% {
-        bottom: 180px;
+        bottom: 200px;
     }
 
     100% {
@@ -63,7 +67,7 @@ body {
     position: absolute;
     width: 90px;
     bottom: 40px;
-    animation: supermario__pipe 2s infinite linear;
+    animation: supermario__pipe 1.5s infinite linear;
 }
 
 @keyframes supermario__pipe {
@@ -81,6 +85,6 @@ body {
     width: 100%;
     height: 40px;
     bottom: 0;
-    background: var(--floor) url('../assets/img/blocomario.svg') top;
+    background: var(--floor) url('../img/blocomario.svg') top;
     background-size: 42.6px;
 }
