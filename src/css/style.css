@@ -16,7 +16,7 @@ body {
     width: 450px;
 }
 
-.supermario {
+.main {
     position: relative;
     width: 1000px;
     height: 550px;
@@ -29,13 +29,13 @@ body {
     position: absolute;
     width: 400px;
     top: 25px;
-    animation: supermario__clouds 20s infinite linear;
+    animation: supermario__clouds 18s infinite linear;
 }
 
 .supermario__mario {
     position: absolute;
-    width: 180px;
-    bottom: 36px;
+    width: 165px;
+    bottom: 40px;
     z-index: +99;
 }
 
@@ -55,8 +55,36 @@ body {
     width: 100%;
     height: 40px;
     bottom: 0;
-    background: var(--floor) url('../img/blocomario.svg') top;
-    background-size: 42.6px;
+}
+
+.start__button {
+    position: absolute;
+    padding: 14px 60px;
+    background-color: var(--dark-green);
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 32px;
+    color: white;
+    letter-spacing: 2.5px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .6), inset 0 4px 6px rgba(255, 255, 255, .25), inset 0 -4px 6px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .1s ease-in-out;
+}
+
+.start__button:hover {
+    background-color: var(--green);
+    color: white;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, .4), inset 0 4px 6px rgba(255, 255, 255, .25), inset 0 -4px 6px rgba(0, 0, 0, .3);
+}
+
+.start__button:active {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, .2), inset 3px 3px 6px rgba(0, 80, 3, 0.2);
 }
 
 @keyframes supermario__clouds {
@@ -71,19 +99,19 @@ body {
 
 @keyframes supermario__mario {
     0% {
-        bottom: 36px;
+        bottom: 40px;
     }
 
-    30% {
+    40% {
         bottom: 200px;
     }
 
-    65% {
+    60% {
         bottom: 200px;
     }
 
     100% {
-        bottom: 36px;
+        bottom: 40px;
     }
 }
 

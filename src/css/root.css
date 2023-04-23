@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
     --light-blue900: #dcfffc;
     --light-blue800: #79efff;
+    --blue: #04D8F7;
+    --light-green: #53FF30;
+    --green: #26cc2b;
+    --dark-green: #007a04;
+    --red: #F73738;
+    --yellow: #F6C729;
     --floor: #713500;
 
-    --border: #0C3A14;
+    --border: #005e10;
 }
+
+/* font-family: 'Press Start 2P', cursive; */

@@ -10,25 +10,28 @@ const jumpMario = () => {
     }, 550);
 }
 
+function gameStart() {
+    
+}
+
 let fallMario = null;
 
 const gameOver = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-    const cloudsPosition = clouds.style.left;
 
-    if (pipePosition <= 145 && pipePosition > 0 && marioPosition < 145) {
-
+    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 150) {
+        
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
-
+        
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
-
+        
         mario.src = './src/img/game-over.png';
         mario.style.width = '80px';
-        mario.style.left = '30px';
-
+        mario.style.left = '25px';
+        
         clouds.style.animationPlayState = 'paused';
 
         clearInterval(gameOver);
