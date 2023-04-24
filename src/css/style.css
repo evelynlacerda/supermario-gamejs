@@ -58,6 +58,7 @@ body {
 }
 
 .start__button {
+    display: none;
     position: absolute;
     padding: 14px 60px;
     background-color: var(--dark-green);

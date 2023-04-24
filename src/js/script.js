@@ -2,6 +2,8 @@ const mario = document.querySelector('.supermario__mario');
 const pipe = document.querySelector('.supermario__pipe');
 const clouds = document.querySelector('.supermario__clouds');
 
+let fallMario = null;
+
 const jumpMario = () => {
     mario.classList.add('jump');
 
@@ -11,10 +13,8 @@ const jumpMario = () => {
 }
 
 function gameStart() {
-    
-}
 
-let fallMario = null;
+}
 
 const gameOver = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
