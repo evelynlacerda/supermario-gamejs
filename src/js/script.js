@@ -1,6 +1,7 @@
 const mario = document.querySelector('.supermario__mario');
 const pipe = document.querySelector('.supermario__pipe');
 const clouds = document.querySelector('.supermario__clouds');
+const startButton = document.querySelector('#start-button');
 
 let fallMario = null;
 
@@ -12,42 +13,43 @@ const jumpMario = () => {
     }, 550);
 }
 
-function gameStart() {
+startButton.addEventListener('click', () => {
 
-}
+    startButton.style.display = "none";
 
-const gameOver = setInterval(() => {
-    const pipePosition = pipe.offsetLeft;
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
+    const gameOver = setInterval(() => {
+        const pipePosition = pipe.offsetLeft;
+        const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 150) {
-        
-        pipe.style.animation = 'none';
-        pipe.style.left = `${pipePosition}px`;
-        
-        mario.style.animation = 'none';
-        mario.style.bottom = `${marioPosition}px`;
-        
-        mario.src = './src/img/game-over.png';
-        mario.style.width = '80px';
-        mario.style.left = '25px';
-        
-        clouds.style.animationPlayState = 'paused';
+        if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 150) {
 
-        clearInterval(gameOver);
+            pipe.style.animation = 'none';
+            pipe.style.left = `${pipePosition}px`;
 
-        let position = marioPosition;
-        fallMario = setInterval(() => {
-            position -= 1.5;
-            mario.style.bottom = `${position}px`;
+            mario.style.animation = 'none';
+            mario.style.bottom = `${marioPosition}px`;
 
-            if (postion <= -mario.offsetHeight) {
-                clearInterval(fallMario);
-            }
-        }, 10);
-    };
+            mario.src = './src/img/game-over.png';
+            mario.style.width = '80px';
+            mario.style.left = '25px';
 
-}, 10);
+            clouds.style.animationPlayState = 'paused';
+
+            clearInterval(gameOver);
+
+            let position = marioPosition;
+            fallMario = setInterval(() => {
+                position -= 1.5;
+                mario.style.bottom = `${position}px`;
+
+                if (postion <= -mario.offsetHeight) {
+                    clearInterval(fallMario);
+                }
+            }, 10);
+        };
+
+    }, 10);
+})
 
 document.addEventListener('keydown', (event) => {
     if (event.code === 'ArrowUp') {
